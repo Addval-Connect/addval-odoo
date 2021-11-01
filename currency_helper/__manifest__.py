@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CurrencyHelper",
+    'name': "Currency Helper",
 
     'summary': "Handles sales in UF or USD to be invoiced as CLP.",
 
@@ -16,16 +16,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['sale_management', 'account', 'account_accountant', 'purchase'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        # 'demo/demo.xml',
     ],
 }
