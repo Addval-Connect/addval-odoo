@@ -2,12 +2,9 @@
 {
     'name': "indexed-sales",
 
-    'summary': """
-        Handles sales in UF or USD to be invoiced as CLP.""",
+    'summary': "Handles sales in UF or USD to be invoiced as CLP.",
 
-    'description': """
-        This module enables the user to sell in UF or USD end invoiced as CLP.
-    """,
+    'description': "This module enables the user to sell in UF or USD end invoiced as CLP.",
 
     'author': "Addval Connect",
     'website': "http://www.addval.cl",
@@ -15,7 +12,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Sales, invoice, localization',
+    'category': 'Technical',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
