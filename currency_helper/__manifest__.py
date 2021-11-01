@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "indexed-sales",
+    'name': "CurrencyHelper",
 
     'summary': "Handles sales in UF or USD to be invoiced as CLP.",
 

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
+class CurrencyHelper(models.Model):
+    _name = 'currency.helper'
+    _description = 'Stores main currency information.'
 
-# class indexed-sales(models.Model):
-#     _name = 'indexed-sales.indexed-sales'
-#     _description = 'indexed-sales.indexed-sales'
-
-#     name = fields.Char()
+    name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
