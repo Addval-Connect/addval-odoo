@@ -3,20 +3,19 @@
     'name': "indexed-sales",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Handles sales in UF or USD to be invoiced as CLP.""",
 
     'description': """
-        Long description of module's purpose
+        This module enables the user to sell in UF or USD end invoiced as CLP.
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Addval Connect",
+    'website': "http://www.addval.cl",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Sales, invoice, localization',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
