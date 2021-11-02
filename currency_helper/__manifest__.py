@@ -17,6 +17,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
+        'base',
         'sale_management', 
         'account', 
         'account_accountant', 
