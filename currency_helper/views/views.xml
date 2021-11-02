@@ -18,7 +18,7 @@
       <field name="name">price.indexed</field>
       <field name="model">product.template</field>
       <field name="arch" type="xml">
-        <field name="list_price" position="after"/>
+        <field name="list_price" position="after">
           <field name="price_indexed"/>
         </field>
       </field>
