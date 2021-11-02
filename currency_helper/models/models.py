@@ -2,16 +2,8 @@
 
 from odoo import models, fields, api
 
-class CurrencyHelper(models.Model):
-    _name = 'currency.helper'
-    _description = 'Stores main currency information.'
+class ProductTemplate(models.Model):
+    _inherit = 'product.template'
 
-    name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    currency_indexed = fields.Selection([('usd', 'USD'), ('uf', 'UF'), ('clp', 'CLP')], string='Currency', default='uf')
+    price_indexed = fields.Float()

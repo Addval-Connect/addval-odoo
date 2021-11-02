@@ -14,7 +14,15 @@
       </field>
     </record>
 -->
-
+    <record model="ir.ui.view" id="currency.helper.price.indexed">
+      <field name="name">price.indexed</field>
+      <field name="model">product.template</field>
+      <field name="arch" type="xml">
+        <field name="list_price" position="after"/>
+          <field name="price_indexed"/>
+        </field>
+      </field>
+    </record>
     <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="indexed-sales.action_window">
