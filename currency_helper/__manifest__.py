@@ -16,13 +16,23 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_management', 'account', 'account_accountant', 'purchase'],
+    'depends': [
+        'sale_management', 
+        'account', 
+        'account_accountant', 
+        'purchase', 
+        'l10n_cl', 
+        'l10n_cl_reports', 
+        'l10n_cl_edi',
+        'l10n_cl_edi_boletas',
+        'l10n_cl_edi_stock'
+    ],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'views/templates.xml',
+        'views/views.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
