@@ -1,26 +1,18 @@
 <odoo>
   <data>
 
-    <record model="ir.ui.view" id="product_template_price">
+    <record model="ir.ui.view" id="product_template_price_indexed">
       <field name="name">product.template.inherited</field>
       <field name="model">product.template</field>
       <field name="inherit_id" ref="product.product_template_only_form_view"/>
       <field name="arch" type="xml">
-        <field name="list_price" position="before">
-          <label for="price_indexed"/>
-          <field name="price_indexed"/>
-        </field>
-      </field>
-    </record>    
-
-    <record model="ir.ui.view" id="product_template_currency">
-      <field name="name">product.template.inherited</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_only_form_view"/>
-      <field name="arch" type="xml">
-        <field name="list_price" position="before">
-          <label for="currency_indexed"/>
-          <field name="currency_indexed"/>
+        <field name="group_standard_price" position="after">
+          <group>
+            <field name="currency_indexed"/>
+          </group>
+          <group>
+            <field name="price_indexed"/>
+          </group>
         </field>
       </field>
     </record>
