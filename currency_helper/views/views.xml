@@ -13,7 +13,7 @@
           <group>
             <field name="price_indexed"/>
           </group>
-        </field>
+        </group>
       </field>
     </record>
     
