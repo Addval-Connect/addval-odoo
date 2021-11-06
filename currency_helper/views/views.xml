@@ -8,10 +8,10 @@
       <field name="arch" type="xml">
         <group name="group_standard_price" position="after">
           <group>
+            <field name="price_indexed"/>
             <field name="currency_indexed"/>
           </group>
           <group>
-            <field name="price_indexed"/>
             <field name="list_price"/>
           </group>
         </group>
