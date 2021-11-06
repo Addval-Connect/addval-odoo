@@ -24,9 +24,9 @@
       <field name="model">sale.order</field>
       <field name="inherit_id" ref="sale.view_order_form"/>
       <field name="arch" type="xml">
-        <xpath expr="//tree[@string='Sales Order Lines']/field[@name='product_uom']" position="after">
-            <!-- field name="price_indexed">
-            <field name="currency_indexed" -->
+        <field name="product_uom" position="after">
+            <field name="price_indexed">
+            <field name="currency_indexed">
          </xpath>
       </field>
     </record>

@@ -20,7 +20,7 @@ class SaleOrderLine(models.Model):
     _name = 'sale.order.line'
     _inherit = 'sale.order.line'
 
-    #currency_indexed = fields.Many2one('res.currency', string='Moneda Indexada', default=lambda self: self.env.user.company_id.currency_id)
+    currency_indexed = fields.Many2one('res.currency', string='Moneda Indexada', default=lambda self: self.env.user.company_id.currency_id)
     price_indexed = fields.Float(string='Precio Indexado')
 
     # This action calculates list_price with the currency_indexed and price_indexed
