@@ -24,8 +24,8 @@ class SaleOrderLine(models.Model):
     price_indexed = fields.Float(string='Precio Indexado')
 
     # This action calculates list_price with the currency_indexed and price_indexed
-    @api.depends('list_price', 'currency_indexed', 'price_indexed')
-    def _compute_price(self):
-        for record in self:
-            record.list_price = record.price_indexed / record.currency_indexed.rate
-        return True
+    #@api.depends('list_price', 'currency_indexed', 'price_indexed')
+    #def _compute_price(self):
+    #    for record in self:
+    #        record.list_price = record.price_indexed / record.currency_indexed.rate
+    #    return True
