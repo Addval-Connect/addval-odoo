@@ -13,5 +13,5 @@ class ProductTemplate(models.Model):
     @api.depends('list_price', 'currency_indexed', 'price_indexed')
     def compute_price(self):
         for record in self:
-            list_price = price_indexed / currency_indexed.rate
+            record.list_price = record.price_indexed / record.currency_indexed.rate
         return True
