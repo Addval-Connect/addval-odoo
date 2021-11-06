@@ -12,6 +12,7 @@
           </group>
           <group>
             <field name="price_indexed"/>
+            <field name="list_price"/>
           </group>
         </group>
       </field>
