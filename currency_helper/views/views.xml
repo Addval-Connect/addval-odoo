@@ -7,13 +7,14 @@
       <field name="inherit_id" ref="product.product_template_only_form_view"/>
       <field name="arch" type="xml">
         <group name="group_standard_price" position="after">
-          <group>
-            <field name="price_indexed"/>
-            <field name="currency_indexed"/>
-          </group>
-          <group>
-            <field name="list_price"/>
-          </group>
+          <div style="background-color: #e2ece9; padding: 5px; border-radius: 5px;">
+            <group>
+              <field name="price_indexed"/>
+              <field name="currency_indexed"/>
+              <field name="list_price"/>
+              <button name="compute_price" type="object" string="Actualizar precio CLP"/>
+            </group>
+          </div>
         </group>
       </field>
     </record>
