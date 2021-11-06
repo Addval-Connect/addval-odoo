@@ -10,6 +10,7 @@ class ProductTemplate(models.Model):
     price_indexed = fields.Float(string='Precio Indexado')
 
     # This action calculates list_price with the currency_indexed and price_indexed
+    @api.depends('list_price', 'currency_indexed', 'price_indexed')
     def compute_price(self):
         for record in self:
             list_price = price_indexed / currency_indexed.rate
