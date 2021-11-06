@@ -27,7 +27,7 @@
         <field name="product_uom" position="after">
             <field name="price_indexed">
             <field name="currency_indexed">
-         </xpath>
+        </field>
       </field>
     </record>
     
