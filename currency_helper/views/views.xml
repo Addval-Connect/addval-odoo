@@ -39,6 +39,25 @@
       </field>
     </record>
     
+    <record id="currency_helper_view_subscription_form_inherit" model="ir.ui.view">
+      <field name="name">sale.subscription.form.inherit</field>
+      <field name="model">sale.subscription</field>
+      <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='lines']/field[@name='recurring_invoice_line_ids']/form/group/group/field[@name='price_unit']" position="before"> 
+          <field name="price_indexed"/> 
+        </xpath>
+        <xpath expr="//page[@name='lines']/field[@name='recurring_invoice_line_ids']/tree/field[@name='price_unit']" position="before"> 
+          <field name="price_indexed"/> 
+        </xpath>
+        <xpath expr="//page[@name='lines']/field[@name='recurring_invoice_line_ids']/form/group/group/field[@name='price_unit']" position="before"> 
+          <field name="currency_indexed"/> 
+        </xpath>
+        <xpath expr="//page[@name='lines']/field[@name='recurring_invoice_line_ids']/tree/field[@name='price_unit']" position="before"> 
+          <field name="currency_indexed"/> 
+        </xpath>
+      </field>
+    </record>
 <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="indexed-sales.action_window">

@@ -31,3 +31,19 @@ class SaleOrderLine(models.Model):
         for record in self:
             record.price_unit = record.price_indexed / record.currency_indexed.rate
         return True
+
+class SaleSubscriptionLine(models.Model):
+    _name = 'sale.subscription.line'
+    _inherit = 'sale.subscription.line'
+
+    currency_indexed = fields.Many2one(related='product_id.product_tmpl_id.currency_indexed', string='Moneda Indexada', store=True, readonly=False)
+    price_indexed = fields.Float(related='product_id.product_tmpl_id.price_indexed', string='Precio Indexado', store=True, readonly=False)
+
+    price_unit = fields.Float(compute='_compute_price_unit', string='Unit Price', digits='Product Price', store=True, readonly=False)
+
+    # This action calculates list_price with the currency_indexed and price_indexed
+    @api.depends('price_unit', 'currency_indexed', 'price_indexed')
+    def _compute_price_unit(self):
+        for record in self:
+            record.price_unit = record.price_indexed / record.currency_indexed.rate
+        return True

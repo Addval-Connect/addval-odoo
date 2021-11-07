@@ -19,6 +19,7 @@
     'depends': [
         'base',
         'sale_management', 
+        'sale_subscription',
         'account', 
         'account_accountant', 
         'purchase', 
