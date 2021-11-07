@@ -26,7 +26,7 @@ class SaleOrderLine(models.Model):
     price_unit = fields.Float(compute='_compute_price_unit', string='Unit Price', digits='Product Price', store=True, readonly=False)
 
     # This action calculates list_price with the currency_indexed and price_indexed
-    @api.depends('list_price', 'currency_indexed', 'price_indexed')
+    @api.depends('price_unit', 'currency_indexed', 'price_indexed')
     def _compute_price_unit(self):
         for record in self:
             record.price_unit = record.price_indexed / record.currency_indexed.rate
