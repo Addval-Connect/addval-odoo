@@ -58,6 +58,23 @@
         </xpath>
       </field>
     </record>
+
+  <!-- Add a record that will add the price_idexed field to the order tree view -->
+  <record id="currency_helper_view_order_tree_inherit" model="ir.ui.view">
+    <field name="name">sale.order.tree.inherit</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_tree"/>
+    <field name="arch" type="xml">
+      <xpath expr="//tree[@name='order_line']/field[@name='price_unit']" position="after"> 
+        <field name="price_indexed"/> 
+      </xpath>
+      <xpath expr="//tree[@name='order_line']/field[@name='price_unit']" position="after"> 
+        <field name="currency_indexed"/> 
+      </xpath>
+    </field>
+  </record>
+
+
 <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="indexed-sales.action_window">
