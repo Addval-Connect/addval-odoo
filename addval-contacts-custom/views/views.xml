@@ -21,7 +21,7 @@
       <field name="model">res.partner</field>
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
-        <field name="l10n_cl_delivery_guide_price" position="after">
+        <field name="l10n_cl_dte_email" position="after">
           <label for="requires_OC" string="Requiere Orden de Compra" />
           <field name="requires_OC"/>
         </field>
