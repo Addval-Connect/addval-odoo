@@ -23,4 +23,4 @@ class addvalContactsCustom(models.Model):
     _name = 'res.partner'
     _inherit = 'res.partner'
 
-    partner_group_name = fields.Char(string='Partner Group Name', related='company_id.group_name')
+    partner_group_name = fields.Char(string='Partner Group Name')
