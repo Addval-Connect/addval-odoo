@@ -19,7 +19,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': [
+        'base',
+        'l10n_cl', 
+        'l10n_cl_reports', 
+        'l10n_cl_edi',
+        'l10n_cl_edi_boletas',
+        'l10n_cl_edi_stock'
+    ],
 
     # always loaded
     'data': [
