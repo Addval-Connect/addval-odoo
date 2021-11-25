@@ -1,6 +1,18 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
+
+    <!-- Add partner group name after parner name at form view-->
+    <record model="ir.ui.view" id="addval-contacts-custom.group-name">
+      <field name="name">partner.group.name.inherited</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <field name="company_name" position="after">
+          <field name="partner_group_name"/>
+        </field>
+      </field>
+    </record>
 <!--
     <record model="ir.ui.view" id="addval-contacts-custom.list">
       <field name="name">addval-contacts-custom list</field>

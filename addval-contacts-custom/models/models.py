@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
 # class addval-contacts-custom(models.Model):
@@ -16,3 +16,11 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
+
+# Model update of the res.partner class
+class addvalContactsCustom(models.Model):
+    _name = 'res.partner'
+    _inherit = 'res.partner'
+
+    partner_group_name = fields.Char(string='Partner Group Name', related='company_id.group_name')
