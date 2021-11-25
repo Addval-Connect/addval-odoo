@@ -16,13 +16,12 @@
     </record>
 
     <!-- Add OC requirement at electronic invoicing notebook-->
-    <record model="ir.ui.view" id="addval-contacts-custom.group-name">
-      <field name="name">partner.group.name.inherited</field>
+    <record model="ir.ui.view" id="addval-contacts-custom.requires-oc">
+      <field name="name">partner.requires.oc.inherited</field>
       <field name="model">res.partner</field>
-      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="inherit_id" ref="l10n_cl_edi.view_partner_l10n_cl_edi_form"/>
       <field name="arch" type="xml">
-        <field name="l10n_cl_dte_email" position="after">
-          <label for="requires_OC" string="Requiere Orden de Compra" />
+        <field name="l10n_cl_activity_description" position="after">
           <field name="requires_OC"/>
         </field>
       </field>
