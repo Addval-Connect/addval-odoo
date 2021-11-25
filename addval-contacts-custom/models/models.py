@@ -24,3 +24,4 @@ class addvalContactsCustom(models.Model):
     _inherit = 'res.partner'
 
     partner_group_name = fields.Char(string='Partner Group Name')
+    requires_OC = fields.Boolean(string='Requires Purchase Order')
