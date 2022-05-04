@@ -50,7 +50,7 @@
                                     <h6 t-att-style="'color: %s;' % o.company_id.primary_color">
                                         <strong t-att-style="'color: %s;' % o.company_id.primary_color">
                                             <br/>
-                                            <span style="line-height: 180%;">RUT:</span>
+                                            <span style="line-height: 180%;">VAT:</span>
                                             <t t-if="o.partner_id.vat">
                                                 <span t-esc="o.partner_id._format_dotted_vat_cl(o.partner_id.vat)"/>
                                                 <br/>
